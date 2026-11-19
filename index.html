@@ -1,0 +1,2328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manul Shrivastava — AI Product Builder & Systems Engineer</title>
+  <meta name="description" content="Portfolio of Manul Shrivastava. AI Product Builder, AI Operations, and Security & Cloud Governance.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Swarm Intro Preload Script -->
+  <script>
+    (function(){
+      try {
+        if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        var d = document.documentElement;
+        d.setAttribute("data-swarm-intro", "");
+        var s = document.createElement("style");
+        s.id = "swarm-intro-preload";
+        s.textContent = "html[data-swarm-intro] body{background:#f4f4f4!important} html[data-swarm-intro] #app{opacity:0!important}";
+        document.head.appendChild(s);
+      } catch(e) {}
+    })();
+  </script>
+
+  <style>
+    :root {
+      /* Picto Design Tokens */
+      --picto-bg: #f4f4f4;
+      --picto-white: #ffffff;
+      --picto-primary: #6c5ce7;
+      --picto-primary-hover: #5846e0;
+      --picto-primary-light: #f0edfe;
+      
+      --picto-coral: #ff7675;
+      --picto-coral-bg: #fff1f0;
+      
+      --picto-fuchsia: #ff477e;
+      --picto-fuchsia-bg: #fff0f4;
+      
+      --picto-text-dark: #111827;
+      --picto-text-body: #475569;
+      --picto-text-muted: #64748b;
+      --picto-border: #e2e8f0;
+      --picto-border-light: #edf2f7;
+
+      --picto-radius-btn: 8px;
+      --picto-radius-card: 16px;
+      --picto-radius-card-lg: 24px;
+      
+      --picto-shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.03);
+      --picto-shadow-card: 0 10px 30px rgba(0, 0, 0, 0.05);
+      --picto-shadow-hover: 0 20px 40px rgba(108, 92, 231, 0.12);
+
+      --font-heading: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--picto-bg);
+      color: var(--picto-text-body);
+      font-family: var(--font-body);
+      line-height: 1.65;
+      font-size: 15px;
+      overflow-x: clip;
+      position: relative;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+      color: var(--picto-text-dark);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Subtle Ambient Gradient Orbs from Figma Ellipse Layers */
+    .bg-orbs-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .bg-orb-1 {
+      position: absolute;
+      top: 300px;
+      left: 8%;
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(108, 92, 231, 0.06) 0%, transparent 70%);
+      filter: blur(80px);
+    }
+
+    .bg-orb-2 {
+      position: absolute;
+      top: 1800px;
+      right: -100px;
+      width: 800px;
+      height: 800px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 118, 117, 0.05) 0%, transparent 70%);
+      filter: blur(100px);
+    }
+
+    .container {
+      max-width: 1170px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Exact Picto Header (Frame 40, Height: 96px) */
+    header.picto-header {
+      background: var(--picto-white);
+      height: 96px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--picto-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+    }
+
+    .picto-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--picto-text-dark);
+    }
+
+    .logo-badge {
+      width: 48px;
+      height: 48px;
+      background: var(--picto-primary);
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 20px;
+      box-shadow: 0 4px 14px rgba(108, 92, 231, 0.3);
+    }
+
+    .logo-text span {
+      color: var(--picto-primary);
+    }
+
+    .nav-right-group {
+      display: flex;
+      align-items: center;
+      gap: clamp(16px, 2.2vw, 32px);
+    }
+
+    .picto-nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(14px, 1.8vw, 26px);
+      list-style: none;
+    }
+
+    .picto-nav a {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+      color: var(--picto-text-muted);
+      transition: color 0.2s;
+    }
+
+    .picto-nav a:hover, .picto-nav a.active {
+      color: var(--picto-primary);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    /* Subtle In-Navbar Replay Swarm Control (replaces intrusive floating bar) */
+    .btn-nav-replay {
+      height: 42px;
+      padding: 0 14px;
+      background: var(--picto-primary-light);
+      color: var(--picto-primary);
+      border: 1px solid rgba(108, 92, 231, 0.2);
+      border-radius: var(--picto-radius-btn);
+      font-family: var(--font-heading);
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+      flex-shrink: 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-nav-replay:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .btn-nav-replay:hover:not(:disabled) {
+      background: var(--picto-primary);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    /* Exact Picto Buttons (Component 89:7227, Height: 48px) */
+    .btn-picto-primary {
+      height: 48px;
+      padding: 0 28px;
+      background: var(--picto-primary);
+      color: #ffffff;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: var(--picto-radius-btn);
+      border: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(108, 92, 231, 0.25);
+    }
+
+    .btn-picto-primary:hover {
+      background: var(--picto-primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(108, 92, 231, 0.35);
+    }
+
+    .btn-picto-border {
+      height: 48px;
+      padding: 0 28px;
+      background: transparent;
+      color: var(--picto-text-dark);
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: var(--picto-radius-btn);
+      border: 1px solid var(--picto-text-dark);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-picto-border:hover {
+      background: var(--picto-text-dark);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .picto-hero {
+      padding: 72px 0 40px;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    @media (max-width: 1020px) {
+      .picto-nav {
+        display: none;
+      }
+    }
+
+    @media (max-width: 960px) {
+      .hero-layout {
+        grid-template-columns: 1fr;
+      }
+      .hero-portrait-frame {
+        top: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .btn-nav-replay {
+        height: 36px;
+        padding: 0 10px;
+        font-size: 12px;
+      }
+      .header-actions .btn-picto-primary {
+        height: 36px;
+        padding: 0 12px;
+        font-size: 12px;
+      }
+    }
+
+    .hero-h1 {
+      font-size: clamp(38px, 4.8vw, 54px);
+      font-weight: 800;
+      color: var(--picto-text-dark);
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+
+    .hero-h1 .text-name {
+      color: var(--picto-primary);
+    }
+
+    .hero-p {
+      font-size: 17px;
+      color: var(--picto-text-body);
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+
+    /* Exact Picto Highlight Underline Bars (Rectangle 32 & 33 in Figma) */
+    .highlight-coral-wrap {
+      position: relative;
+      display: inline-block;
+      font-weight: 700;
+      color: var(--picto-text-dark);
+    }
+
+    .highlight-coral-wrap::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: var(--picto-coral);
+      border-radius: 4px;
+      z-index: -1;
+      opacity: 0.85;
+    }
+
+    .highlight-fuchsia-wrap {
+      position: relative;
+      display: inline-block;
+      font-weight: 700;
+      color: var(--picto-text-dark);
+    }
+
+    .highlight-fuchsia-wrap::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: var(--picto-fuchsia);
+      border-radius: 4px;
+      z-index: -1;
+      opacity: 0.85;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+
+    /* Right Hero Portrait Frame (Clean Picto Alignment) */
+    .hero-portrait-frame {
+      position: relative;
+      background: var(--picto-white);
+      border-radius: 32px;
+      padding: 12px;
+      box-shadow: var(--picto-shadow-hover);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .portrait-inner {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #e2e8f0;
+      position: relative;
+    }
+
+    .portrait-inner img {
+      width: 100%;
+      height: 115%;
+      object-fit: cover;
+      object-position: center top;
+      transform: translateY(-2cm);
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .hero-portrait-frame:hover .portrait-inner img {
+      transform: translateY(-2cm) scale(1.02);
+    }
+
+    /* Floating Metrics Bar (Frame 1, 135:711 in Figma) */
+    .picto-metrics-bar {
+      background: var(--picto-white);
+      border-radius: 20px;
+      padding: 24px 36px;
+      box-shadow: var(--picto-shadow-card);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 40px 0 80px;
+      border: 1px solid var(--picto-border-light);
+    }
+
+    @media (max-width: 680px) {
+      .picto-metrics-bar {
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+    }
+
+    .metric-cell {
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--picto-border-light);
+      padding-right: 24px;
+    }
+
+    .metric-cell:last-child {
+      border-right: none;
+      padding-right: 0;
+    }
+
+    .metric-num {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--picto-text-dark);
+      font-family: var(--font-heading);
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .metric-num span {
+      color: var(--picto-primary);
+    }
+
+    .metric-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--picto-text-dark);
+    }
+
+    .metric-desc {
+      font-size: 12px;
+      color: var(--picto-text-muted);
+    }
+
+    /* About Section */
+    .picto-about-card {
+      background: var(--picto-white);
+      border-radius: var(--picto-radius-card-lg);
+      padding: 56px 48px;
+      box-shadow: var(--picto-shadow-card);
+      margin-bottom: 88px;
+      border: 1px solid var(--picto-border-light);
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    @media (max-width: 860px) {
+      .about-layout {
+        grid-template-columns: 1fr;
+        padding: 32px 24px;
+      }
+      .about-visual-wrap {
+        top: 0;
+        margin-bottom: 32px;
+      }
+    }
+
+    .about-visual-wrap {
+      position: relative;
+      top: 2cm;
+      margin-bottom: 2cm;
+    }
+
+    .about-img-box {
+      width: 100%;
+      aspect-ratio: 4 / 4.5;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--picto-shadow-sm);
+    }
+
+    .about-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .about-floating-social {
+      position: absolute;
+      bottom: -24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--picto-white);
+      border-radius: 14px;
+      box-shadow: var(--picto-shadow-card);
+      padding: 10px 18px;
+      display: flex;
+      gap: 12px;
+      border: 1px solid var(--picto-border);
+    }
+
+    .social-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--picto-primary-light);
+      color: var(--picto-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .social-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    .social-btn:hover {
+      background: var(--picto-primary);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .about-content h2 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .about-content p {
+      font-size: 15px;
+      color: var(--picto-text-body);
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    .about-btns {
+      display: flex;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    /* Staggered Work Process Section */
+    .picto-process-section {
+      margin-bottom: 96px;
+    }
+
+    .process-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .process-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .process-left-text h2 {
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .process-left-text p {
+      font-size: 15px;
+      color: var(--picto-text-body);
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    .process-staggered-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .process-col-1 {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .process-col-2 {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .process-card {
+      background: var(--picto-white);
+      border-radius: var(--picto-radius-card);
+      padding: 32px 24px;
+      box-shadow: var(--picto-shadow-sm);
+      border: 1px solid var(--picto-border-light);
+      transition: all 0.3s ease;
+    }
+
+    .process-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--picto-shadow-card);
+      border-color: var(--picto-primary);
+    }
+
+    .process-card-icon-box {
+      width: 48px;
+      height: 48px;
+      background: var(--picto-primary-light);
+      color: var(--picto-primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .process-card-icon-box svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+    }
+
+    .process-card h4 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .process-card p {
+      font-size: 13.5px;
+      color: var(--picto-text-muted);
+      line-height: 1.6;
+    }
+
+    /* Portfolio Section */
+    .picto-portfolio-section {
+      margin-bottom: 96px;
+    }
+
+    .section-header-center {
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto 52px;
+    }
+
+    .section-header-center h2 {
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .section-header-center p {
+      font-size: 15px;
+      color: var(--picto-text-muted);
+    }
+
+    .portfolio-grid-3col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 28px;
+      margin-bottom: 40px;
+    }
+
+    .picto-project-card {
+      background: var(--picto-white);
+      border-radius: var(--picto-radius-card);
+      padding: 24px;
+      box-shadow: var(--picto-shadow-sm);
+      border: 1px solid var(--picto-border-light);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+    }
+
+    .picto-project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--picto-shadow-hover);
+      border-color: rgba(108, 92, 231, 0.4);
+    }
+
+    .project-card-img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      background: #edf2f7;
+      border: 1px solid var(--picto-border-light);
+    }
+
+    .project-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .picto-project-card:hover .project-card-img img {
+      transform: scale(1.04);
+    }
+
+    .project-card-top {
+      margin-bottom: 18px;
+    }
+
+    .project-cat-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--picto-primary);
+      background: var(--picto-primary-light);
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 14px;
+    }
+
+    .picto-project-card h3 {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .project-desc {
+      font-size: 14px;
+      color: var(--picto-text-body);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .project-checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .project-checklist li {
+      font-size: 13px;
+      color: var(--picto-text-muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .project-checklist li::before {
+      content: "✓";
+      color: var(--picto-primary);
+      font-weight: 800;
+    }
+
+    .project-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding-top: 14px;
+      border-top: 1px solid var(--picto-border-light);
+    }
+
+    .chip-tag {
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--picto-bg);
+      color: var(--picto-text-muted);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+    }
+
+    /* Call to Action Banner */
+    .picto-cta-card {
+      background: linear-gradient(135deg, #6c5ce7 0%, #a855f7 100%);
+      border-radius: var(--picto-radius-card-lg);
+      padding: 64px 48px;
+      text-align: center;
+      color: #ffffff;
+      box-shadow: 0 20px 40px rgba(108, 92, 231, 0.25);
+      margin-bottom: 96px;
+    }
+
+    .picto-cta-card h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 14px;
+    }
+
+    .picto-cta-card p {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 600px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+
+    .btn-picto-white {
+      height: 48px;
+      padding: 0 32px;
+      background: #ffffff;
+      color: var(--picto-primary);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 15px;
+      border-radius: var(--picto-radius-btn);
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .btn-picto-white:hover {
+      background: #f8fafc;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    /* What I Do Section */
+    .picto-what-i-do {
+      margin-bottom: 96px;
+    }
+
+    .what-i-do-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .what-i-do-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .what-i-do-left h2 {
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .what-i-do-left p {
+      font-size: 15px;
+      color: var(--picto-text-body);
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+
+    .what-i-do-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .horizontal-service-card {
+      background: var(--picto-white);
+      border-radius: var(--picto-radius-card);
+      padding: 24px 28px;
+      box-shadow: var(--picto-shadow-sm);
+      border: 1px solid var(--picto-border-light);
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .horizontal-service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--picto-shadow-card);
+      border-color: var(--picto-primary);
+    }
+
+    .service-icon-square {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--picto-primary-light);
+      color: var(--picto-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .service-icon-square svg {
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
+    }
+
+    .service-body h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .service-body p {
+      font-size: 13.5px;
+      color: var(--picto-text-muted);
+      line-height: 1.6;
+    }
+
+    /* Contact Section */
+    .picto-contact-section {
+      margin-bottom: 96px;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 56px;
+    }
+
+    @media (max-width: 900px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contact-left h2 {
+      font-size: 34px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .contact-left p {
+      font-size: 15px;
+      color: var(--picto-text-body);
+      margin-bottom: 32px;
+    }
+
+    .address-cards-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .picto-address-card {
+      background: var(--picto-white);
+      border-radius: var(--picto-radius-card);
+      padding: 18px 24px;
+      box-shadow: var(--picto-shadow-sm);
+      border: 1px solid var(--picto-border-light);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .address-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--picto-primary-light);
+      color: var(--picto-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .address-icon-box svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+    }
+
+    .address-card-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--picto-text-muted);
+    }
+
+    .address-card-val {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--picto-text-dark);
+    }
+
+    .picto-form-card {
+      background: var(--picto-white);
+      border-radius: var(--picto-radius-card-lg);
+      padding: 40px;
+      box-shadow: var(--picto-shadow-card);
+      border: 1px solid var(--picto-border-light);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--picto-text-dark);
+      margin-bottom: 8px;
+    }
+
+    .form-group input, .form-group textarea {
+      width: 100%;
+      background: var(--picto-bg);
+      border: 1px solid var(--picto-border);
+      padding: 14px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: inherit;
+      color: var(--picto-text-dark);
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+      border-color: var(--picto-primary);
+      background: var(--picto-white);
+      box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.15);
+    }
+
+    /* Footer */
+    footer.picto-footer {
+      background: var(--picto-white);
+      border-top: 1px solid var(--picto-border);
+      padding: 48px 0;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-copy {
+      font-size: 14px;
+      color: var(--picto-text-muted);
+    }
+
+    .footer-links-list {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links-list a {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--picto-text-muted);
+      transition: color 0.2s;
+    }
+
+    /* Document-Anchored Swarm Layer (Native GPU Compositor Scroll Lockstep) */
+    .swarm-intro-layer {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      z-index: 2147483000 !important;
+      pointer-events: none !important;
+      overflow: hidden !important;
+      contain: layout style !important;
+    }
+
+    .swarm-intro-world {
+      position: absolute !important;
+      inset: 0 !important;
+      contain: layout style !important;
+    }
+
+    .swarm-intro-cursor {
+      will-change: transform !important;
+      backface-visibility: hidden !important;
+    }
+
+    /* Precision Sub-pixel Alignment for Swarm Intro Selection Drag Rectangles */
+    .swarm-intro-box {
+      box-sizing: border-box !important;
+      pointer-events: none !important;
+      border: 1.5px solid var(--swarm-intro-fg) !important;
+      outline: none !important;
+    }
+
+    .swarm-intro-badge {
+      box-sizing: border-box !important;
+      pointer-events: none !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+      font-feature-settings: "tnum" !important;
+      font-variant-numeric: tabular-nums !important;
+    }
+
+    /* Ambient Background Orbs */
+    .bg-orbs-container {
+      opacity: 0;
+      transition: opacity 2s ease;
+    }
+
+    .bg-orbs-container.is-active {
+      opacity: 1;
+    }
+
+    /* Blank Canvas Containers: Initially hidden, smoothly reveal as swarm builds inner components */
+    header.picto-header,
+    .hero-portrait-frame,
+    .picto-metrics-bar,
+    .picto-about-card,
+    .process-card,
+    .picto-project-card,
+    .picto-cta-card,
+    .horizontal-service-card,
+    .picto-address-card,
+    .picto-form-card,
+    footer.picto-footer {
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    header.picto-header.is-built,
+    .hero-portrait-frame.is-built,
+    .picto-metrics-bar.is-built,
+    .picto-about-card.is-built,
+    .process-card.is-built,
+    .picto-project-card.is-built,
+    .picto-cta-card.is-built,
+    .horizontal-service-card.is-built,
+    .picto-address-card.is-built,
+    .picto-form-card.is-built,
+    footer.picto-footer.is-built,
+    .swarm-completed header.picto-header,
+    .swarm-completed .hero-portrait-frame,
+    .swarm-completed .picto-metrics-bar,
+    .swarm-completed .picto-about-card,
+    .swarm-completed .process-card,
+    .swarm-completed .picto-project-card,
+    .swarm-completed .picto-cta-card,
+    .swarm-completed .horizontal-service-card,
+    .swarm-completed .picto-address-card,
+    .swarm-completed .picto-form-card,
+    .swarm-completed footer.picto-footer {
+      opacity: 1 !important;
+    }
+
+    /* Tour Button Unlock Reveal */
+    @keyframes tourUnlockGlow {
+      0% {
+        box-shadow: 0 0 0 0 rgba(108, 92, 231, 0.55);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(108, 92, 231, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(108, 92, 231, 0);
+      }
+    }
+
+    #tourBtn.is-unlocked {
+      animation: tourUnlockGlow 0.9s ease-out;
+    }
+
+    /* Paired Role Cursors Guided Tour */
+    body.tour-active .process-card,
+    body.tour-active .picto-project-card,
+    body.tour-active .horizontal-service-card {
+      opacity: 0.42 !important;
+      transition: opacity 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
+    }
+
+    body.tour-active .process-card.tour-card-focused,
+    body.tour-active .picto-project-card.tour-card-focused,
+    body.tour-active .horizontal-service-card.tour-card-focused {
+      opacity: 1 !important;
+      position: relative;
+      z-index: 20;
+      border-color: var(--picto-primary) !important;
+      box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.3), 0 24px 55px rgba(108, 92, 231, 0.16) !important;
+    }
+
+    .tour-overlay {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 2147482500;
+    }
+
+    .tour-cursor-agent {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: inline-flex;
+      align-items: flex-start;
+      gap: 4px;
+      pointer-events: none;
+      z-index: 2147482505;
+      filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.22));
+      transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: transform;
+    }
+
+    .tour-role-tag {
+      margin-top: 14px;
+      padding: 2px 8px;
+      border-radius: 9999px;
+      font-family: var(--font-heading);
+      font-size: 11px;
+      font-weight: 700;
+      color: #ffffff;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+    }
+
+    .tour-cursor-agent--architect .tour-role-tag {
+      background: var(--picto-primary);
+    }
+
+    .tour-cursor-agent--ops .tour-role-tag {
+      background: var(--picto-coral);
+    }
+
+    .tour-comment-bubble {
+      position: fixed;
+      padding: 13px 15px;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(10px);
+      border-radius: 14px;
+      border: 1.5px solid rgba(108, 92, 231, 0.28);
+      box-shadow: 0 18px 42px rgba(17, 24, 39, 0.16);
+      z-index: 2147482503;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(8px) scale(0.98);
+      transition: opacity 0.25s ease, transform 0.25s ease, left 0.35s ease, top 0.35s ease;
+    }
+
+    .tour-comment-bubble:not(.is-visible) {
+      transition: opacity 0.18s ease, transform 0.18s ease;
+    }
+
+    .tour-comment-bubble--ops {
+      border-color: rgba(255, 118, 117, 0.38);
+    }
+
+    .tour-comment-bubble.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .tour-bubble-header {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 6px;
+      font-family: var(--font-heading);
+      font-size: 11px;
+    }
+
+    .tour-bubble-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .tour-comment-bubble--architect .tour-bubble-dot {
+      background: var(--picto-primary);
+    }
+
+    .tour-comment-bubble--ops .tour-bubble-dot {
+      background: var(--picto-coral);
+    }
+
+    .tour-bubble-role {
+      font-weight: 700;
+      color: var(--picto-text-dark);
+    }
+
+    .tour-bubble-topic {
+      margin-left: auto;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--picto-text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 170px;
+    }
+
+    .tour-bubble-text {
+      font-family: var(--font-body);
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: #374151;
+      margin: 0;
+    }
+
+    .tour-control-pill {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      max-width: calc(100vw - 24px);
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px 12px;
+      padding: 8px 14px;
+      background: rgba(17, 24, 39, 0.94);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 22px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.28);
+      pointer-events: auto;
+      z-index: 2147482510;
+      font-family: var(--font-heading);
+      font-size: 12px;
+    }
+
+    .tour-pill-status {
+      font-weight: 600;
+      color: #e5e7eb;
+      white-space: nowrap;
+      padding-left: 4px;
+    }
+
+    .tour-pill-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tour-pill-btn {
+      padding: 5px 10px;
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 9999px;
+      font-family: var(--font-heading);
+      font-size: 11.5px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.18s ease, opacity 0.18s ease;
+    }
+
+    .tour-pill-btn:hover:not(:disabled) {
+      background: var(--picto-primary);
+      border-color: var(--picto-primary);
+    }
+
+    .tour-pill-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .tour-pill-btn--exit:hover {
+      background: var(--picto-coral) !important;
+      border-color: var(--picto-coral) !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Blurred Orbs from Figma Ellipse Layers -->
+  <div class="bg-orbs-container">
+    <div class="bg-orb-1"></div>
+    <div class="bg-orb-2"></div>
+  </div>
+
+  <!-- Rebuildable App Container for Swarm Intro -->
+  <div id="app">
+    
+    <!-- Exact Picto Top Navigation Bar (Frame 40, Height: 96px) -->
+    <header class="picto-header">
+      <div class="container">
+        <div class="header-inner">
+          <a href="#" class="picto-logo">
+            <div class="logo-badge">M</div>
+            <div class="logo-text">Manul<span>.</span></div>
+          </a>
+
+          <div class="nav-right-group">
+            <ul class="picto-nav">
+              <li><a href="#home" class="active">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#process">Process</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="header-actions">
+              <!-- Replay Swarm Button (Discreet in Navbar) -->
+              <button id="replayBtn" type="button" class="btn-nav-replay" title="Replay the multiplayer cursor animation">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                Replay Swarm
+              </button>
+
+              <!-- Guided 2-Cursor Tour Button (Unlocked when Swarm completes build) -->
+              <button id="tourBtn" type="button" class="btn-nav-replay" disabled title="Tour unlocks once swarm completes the build">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                Tour
+              </button>
+
+              <a href="#contact" class="btn-picto-primary">Say Hello!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="picto-hero">
+        <div class="container">
+          <div class="hero-layout">
+            
+            <div class="hero-text-col">
+              <h1 class="hero-h1">
+                Hello, I’m <br><span class="text-name">Manul Shrivastava</span>
+              </h1>
+              
+              <p class="hero-p">
+                I'm an <span class="highlight-coral-wrap">AI Product Builder</span> and <span class="highlight-fuchsia-wrap">AI Operations Specialist</span> based in Mumbai, India. I specialize in building autonomous agentic architectures, low-latency conversational voice tutors, and self-hosted GPU rendering clusters on RunPod without traditional multi-developer bottlenecks.
+              </p>
+              
+              <div class="hero-actions">
+                <a href="#contact" class="btn-picto-primary">Say Hello!</a>
+                <a href="#portfolio" class="btn-picto-border">View My Work</a>
+              </div>
+            </div>
+
+            <!-- Hero Portrait Frame -->
+            <div class="hero-portrait-frame">
+              <div class="portrait-inner">
+                <img src="./profile.jpg" alt="Manul Shrivastava Portrait" />
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Floating Metrics Bar (Frame 1 in Figma) -->
+          <div class="picto-metrics-bar">
+            <div class="metric-cell">
+              <div class="metric-num">₹4–₹6<span></span></div>
+              <div class="metric-label">GPU Unit Economics</div>
+              <div class="metric-desc">Slashed SaaS video preview API costs via self-hosted RunPod</div>
+            </div>
+            <div class="metric-cell">
+              <div class="metric-num">&lt;1<span>s</span></div>
+              <div class="metric-label">Spoken Voice Latency</div>
+              <div class="metric-desc">Sub-second conversational loop with Gemini Flash Live</div>
+            </div>
+            <div class="metric-cell">
+              <div class="metric-num">99<span>%</span></div>
+              <div class="metric-label">National Cyber Exam</div>
+              <div class="metric-desc">SWAYAM / UGC Proctored Cybersecurity Specialization</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="container">
+        <div class="picto-about-card">
+          <div class="about-layout">
+            
+            <div class="about-visual-wrap">
+              <div class="about-img-box">
+                <img src="./about-photo.jpg" alt="About Manul Shrivastava — AI Product Builder & AI Operations Specialist" />
+              </div>
+              <!-- Floating Social Media Card -->
+              <div class="about-floating-social">
+                <a href="https://linkedin.com/in/manulsh" target="_blank" class="social-btn" title="LinkedIn">
+                  <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
+                </a>
+                <a href="https://github.com/manul05" target="_blank" class="social-btn" title="GitHub">
+                  <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                </a>
+                <a href="mailto:manulshrivastava05@gmail.com" class="social-btn" title="Email">
+                  <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </a>
+                <a href="tel:+919300453002" class="social-btn" title="Call">
+                  <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="about-content">
+              <h2>I am an AI Product Builder & AI Operations Specialist</h2>
+              <p>
+                I take commercial AI applications from 0-to-1 using autonomous agentic workflows (Claude Code, OpenAI Codex, Google Antigravity) without traditional multi-developer bottlenecks.
+              </p>
+              <p>
+                Specialized in deploying containerized MuseTalk and LatentSync video lip-sync pipelines on self-hosted RunPod GPU clusters (RTX 4090/A4000), building sub-second bidirectional voice tutors with Gemini Flash Live API, and enforcing Section 9(3) compliance under the Indian DPDP Act 2023.
+              </p>
+              <div class="about-btns">
+                <a href="#portfolio" class="btn-picto-primary">My Projects</a>
+                <a href="https://linkedin.com/in/manulsh" target="_blank" class="btn-picto-border">View LinkedIn</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Work Process Section (Staggered 2x2 Grid) -->
+      <section id="process" class="picto-process-section">
+        <div class="container">
+          <div class="process-layout">
+            
+            <div class="process-left-text">
+              <h2>Work Process</h2>
+              <p>
+                How I take production AI systems from concept to hardened deployment with zero developer bottlenecks.
+              </p>
+              <p>
+                A high-velocity engineering loop combining autonomous coding agent scaffolding, containerized GPU operations, and rigorous compliance gates.
+              </p>
+            </div>
+
+            <!-- Staggered 2x2 Grid with Minimal Line Icons -->
+            <div class="process-staggered-grid">
+              <div class="process-col-1">
+                <div class="process-card">
+                  <div class="process-card-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                  </div>
+                  <h4>1. Architecture & Prompt Design</h4>
+                  <p>Engineering multi-LLM pipelines, Indian-English voice prompts, repeat guards, and tool-calling schemas.</p>
+                </div>
+                <div class="process-card">
+                  <div class="process-card-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                  </div>
+                  <h4>3. RunPod GPU Cluster Ops</h4>
+                  <p>Deploying containerized MuseTalk/LatentSync on RTX 4090 pods with auto-lifecycle and Telegram bot alerting.</p>
+                </div>
+              </div>
+
+              <div class="process-col-2">
+                <div class="process-card">
+                  <div class="process-card-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  </div>
+                  <h4>2. Agentic Delivery</h4>
+                  <p>Accelerating implementation velocity using Claude Code, Codex, and Antigravity with strict QA gates.</p>
+                </div>
+                <div class="process-card">
+                  <div class="process-card-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </div>
+                  <h4>4. Security & Compliance</h4>
+                  <p>Auditing 38+ DB schemas under Section 9(3) DPDP Act 2023 and blocking auth bypasses before release.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="picto-portfolio-section">
+        <div class="container">
+          <div class="section-header-center">
+            <h2>Portfolio</h2>
+            <p>Production AI architectures, commercial LMS modernizations, and cloud security labs.</p>
+          </div>
+
+          <div class="portfolio-grid-3col">
+            
+            <!-- Project 1 -->
+            <div class="picto-project-card">
+              <div class="project-card-top">
+                <div class="project-card-img">
+                  <img src="./images/aimind_studio.jpg" alt="Ai-Mind Autonomous Video Course Studio" />
+                </div>
+                <span class="project-cat-badge">Multimodal AI Studio · Hitarthi</span>
+                <h3>Ai-Mind / EduMind</h3>
+                <p class="project-desc">
+                  Autonomous AI Video Course Studio converting single prompts into complete video courses with structured curricula, auto-fitted slides, narration, and lip-synced video lessons.
+                </p>
+                <ul class="project-checklist">
+                  <li>Self-hosted MuseTalk & LatentSync on RunPod GPU clusters (RTX 4090/A4000).</li>
+                  <li>Slashed video generation costs down to ₹4–₹6 per preview.</li>
+                  <li>Real-time Render Ops console with automated pod lifecycle & Telegram alerts.</li>
+                </ul>
+              </div>
+              <div class="project-chips">
+                <span class="chip-tag">RunPod</span>
+                <span class="chip-tag">RTX 4090</span>
+                <span class="chip-tag">MuseTalk</span>
+                <span class="chip-tag">LatentSync</span>
+                <span class="chip-tag">Docker</span>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="picto-project-card">
+              <div class="project-card-top">
+                <div class="project-card-img">
+                  <img src="./images/meera_voice.jpg" alt="Meera AI Voice Tutor" />
+                </div>
+                <span class="project-cat-badge">Real-Time Voice AI · Hitarthi-Playground</span>
+                <h3>"Meera" AI Voice Tutor</h3>
+                <p class="project-desc">
+                  Low-latency bidirectional conversational English tutor for students powered by Google Gemini Flash Live API and streaming TTS.
+                </p>
+                <ul class="project-checklist">
+                  <li>Engineered Indian-English system prompts & conversational repeat guards.</li>
+                  <li>Automated Sarvam AI voice fallbacks to guarantee sub-second spoken latency.</li>
+                  <li>Full duplex conversational loop with zero speech collisions.</li>
+                </ul>
+              </div>
+              <div class="project-chips">
+                <span class="chip-tag">Gemini Flash Live</span>
+                <span class="chip-tag">Sarvam AI</span>
+                <span class="chip-tag">TTS Streaming</span>
+                <span class="chip-tag">WebSockets</span>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="picto-project-card">
+              <div class="project-card-top">
+                <div class="project-card-img">
+                  <img src="./images/enterprise_lms.jpg" alt="Enterprise LMS Platform" />
+                </div>
+                <span class="project-cat-badge">Enterprise EdTech & Rights</span>
+                <h3>Enterprise LMS & Affiliate Platform</h3>
+                <p class="project-desc">
+                  Commercial LMS modernization serving thousands of active students and multi-tier affiliate networks with strict anti-piracy protections.
+                </p>
+                <ul class="project-checklist">
+                  <li>Cloudflare R2 time-limited presigned URL streaming for anti-piracy.</li>
+                  <li>Strict transactional integrity across multi-tier affiliate payouts.</li>
+                  <li>Automated staging-to-production deployment pipeline via Railway.</li>
+                </ul>
+              </div>
+              <div class="project-chips">
+                <span class="chip-tag">Cloudflare R2</span>
+                <span class="chip-tag">Railway</span>
+                <span class="chip-tag">Agentic Delivery</span>
+                <span class="chip-tag">Security Gates</span>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="picto-project-card">
+              <div class="project-card-top">
+                <div class="project-card-img">
+                  <img src="./images/typing_telemetry.jpg" alt="Hitarthi Typing Telemetry" />
+                </div>
+                <span class="project-cat-badge">EdTech & Governance</span>
+                <h3>Hitarthi-Typing & DPDP Compliance</h3>
+                <p class="project-desc">
+                  Gamified school typing telemetry coach paired with strict enterprise compliance for minor users (<18).
+                </p>
+                <ul class="project-checklist">
+                  <li>Audited 38 database schemas under Section 9(3) of Indian DPDP Act 2023.</li>
+                  <li>Established B2B data fiduciary boundaries & data minimization.</li>
+                  <li>AI telemetry analyzing keystroke speed to target weak finger keys.</li>
+                </ul>
+              </div>
+              <div class="project-chips">
+                <span class="chip-tag">DPDP Act 2023</span>
+                <span class="chip-tag">Telemetry</span>
+                <span class="chip-tag">Data Fiduciary</span>
+                <span class="chip-tag">OWASP</span>
+              </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="picto-project-card">
+              <div class="project-card-top">
+                <div class="project-card-img">
+                  <img src="./images/soc_automation.jpg" alt="Cloud SOC Incident Automation" />
+                </div>
+                <span class="project-cat-badge">Security Ops & SOAR</span>
+                <h3>Cloud SOC Incident Automation</h3>
+                <p class="project-desc">
+                  Automated incident response pipeline connecting Wazuh XDR webhook alerts to Shuffle SOAR for rapid triage.
+                </p>
+                <ul class="project-checklist">
+                  <li>Auto-enriches indicators (SHA256, C2 IPs) via VirusTotal APIs.</li>
+                  <li>Opens cases in TheHive and emails analysts to mitigate alert fatigue.</li>
+                  <li>Reproducible containerized orchestration with Docker.</li>
+                </ul>
+              </div>
+              <div class="project-chips">
+                <span class="chip-tag">Wazuh XDR</span>
+                <span class="chip-tag">Shuffle SOAR</span>
+                <span class="chip-tag">TheHive</span>
+                <span class="chip-tag">VirusTotal</span>
+              </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="picto-project-card">
+              <div class="project-card-top">
+                <div class="project-card-img">
+                  <img src="./images/ad_detection_lab.jpg" alt="Active Directory Detection Lab" />
+                </div>
+                <span class="project-cat-badge">Red/Blue Teaming</span>
+                <h3>Active Directory Adversary Lab</h3>
+                <p class="project-desc">
+                  Windows Server 2022 AD environment simulating adversary attacks and lateral movement tracking.
+                </p>
+                <ul class="project-checklist">
+                  <li>Simulated Kerberoasting & RDP brute-force via Atomic Red Team.</li>
+                  <li>Built Splunk SIEM dashboards with Sysmon telemetry to trace threats.</li>
+                  <li>Tuned detection rules reducing false positives by 25%.</li>
+                </ul>
+              </div>
+              <div class="project-chips">
+                <span class="chip-tag">Splunk SIEM</span>
+                <span class="chip-tag">Sysmon</span>
+                <span class="chip-tag">Atomic Red Team</span>
+                <span class="chip-tag">Active Directory</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div style="text-align: center;">
+            <a href="https://github.com/manul05" target="_blank" class="btn-picto-primary">More Projects on GitHub ➔</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Banner -->
+      <div class="container">
+        <section class="picto-cta-card">
+          <h2>Do you have an AI Project Idea? <br>Let’s discuss your project!</h2>
+          <p>
+            Eliminate traditional multi-developer bottlenecks and deploy high-performance multimodal AI systems with verified unit economics.
+          </p>
+          <a href="#contact" class="btn-picto-white">Let’s Work Together ➔</a>
+        </section>
+      </div>
+
+      <!-- What I Do Section with Crisp SVG Line Icons -->
+      <section id="services" class="picto-what-i-do">
+        <div class="container">
+          <div class="what-i-do-layout">
+            
+            <div class="what-i-do-left">
+              <h2>What I do?</h2>
+              <p>
+                I provide specialized full-stack AI product engineering and operations, bridging generative model innovation with enterprise-grade cloud security.
+              </p>
+              <a href="#contact" class="btn-picto-primary">Say Hello!</a>
+            </div>
+
+            <!-- Stacked Horizontal Service Cards -->
+            <div class="what-i-do-stack">
+              <div class="horizontal-service-card">
+                <div class="service-icon-square">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                </div>
+                <div class="service-body">
+                  <h3>Autonomous Product Engineering</h3>
+                  <p>Taking apps from 0-to-1 using Claude Code, OpenAI Codex, and Antigravity with strict QA verification gates and system scaffolding.</p>
+                </div>
+              </div>
+
+              <div class="horizontal-service-card">
+                <div class="service-icon-square">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+                </div>
+                <div class="service-body">
+                  <h3>AI Operations & GPU Clusters</h3>
+                  <p>Deploying self-hosted MuseTalk/LatentSync models on RunPod RTX 4090/A4000 clusters, cutting SaaS costs, and building real-time Telegram monitoring bots.</p>
+                </div>
+              </div>
+
+              <div class="horizontal-service-card">
+                <div class="service-icon-square">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="service-body">
+                  <h3>Cloud Security & DPDP Compliance</h3>
+                  <p>Auditing AI applications for OWASP Top 10 vulnerabilities, performing VAPT, and establishing data fiduciary compliance under Section 9(3) of the Indian DPDP Act 2023.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section with Clean SVG Line Icons -->
+      <section id="contact" class="picto-contact-section">
+        <div class="container">
+          <div class="contact-layout">
+            
+            <div class="contact-left">
+              <h2>Let’s discuss your Project</h2>
+              <p>
+                Have an AI system to build, GPU clusters to optimize, or compliance audits to conduct? Feel free to reach out directly.
+              </p>
+
+              <!-- Address Cards Stack -->
+              <div class="address-cards-stack">
+                <div class="picto-address-card">
+                  <div class="address-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div>
+                    <div class="address-card-title">Location</div>
+                    <div class="address-card-val">Mumbai, India</div>
+                  </div>
+                </div>
+
+                <div class="picto-address-card">
+                  <div class="address-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </div>
+                  <div>
+                    <div class="address-card-title">Email</div>
+                    <div class="address-card-val">
+                      <a href="mailto:manulshrivastava05@gmail.com" style="color: var(--picto-primary);">manulshrivastava05@gmail.com</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="picto-address-card">
+                  <div class="address-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <div>
+                    <div class="address-card-title">Phone</div>
+                    <div class="address-card-val">+91 9300453002</div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 12px;">
+                <a href="https://linkedin.com/in/manulsh" target="_blank" class="social-btn" title="LinkedIn">
+                  <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
+                </a>
+                <a href="https://github.com/manul05" target="_blank" class="social-btn" title="GitHub">
+                  <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                </a>
+                <a href="mailto:manulshrivastava05@gmail.com" class="social-btn" title="Email">
+                  <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="picto-form-card">
+              <form onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" placeholder="Name*" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" placeholder="Email*" required />
+                </div>
+                <div class="form-group">
+                  <label for="location">Location</label>
+                  <input type="text" id="location" placeholder="Location" />
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" rows="4" placeholder="Tell me about your project, timeline, or engineering needs*" required></textarea>
+                </div>
+                <button type="submit" class="btn-picto-primary" style="width: 100%;">Submit Message ➔</button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="picto-footer">
+      <div class="container">
+        <div class="footer-row">
+          <div class="picto-logo">
+            <div class="logo-badge">M</div>
+            <div class="logo-text">Manul<span>.</span></div>
+          </div>
+          <ul class="footer-links-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="footer-copy">
+            Copyright © 2026 <strong>Manul Shrivastava</strong>.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Swarm Intro Execution, Showcase Auto-Scroll & Paired-Cursor Tour Integration -->
+  <script type="module">
+    import { swarmIntro } from './swarm-intro-engine.js';
+    import { startPairedTour, stopPairedTour } from './paired-tour.js';
+
+    let currentSwarm = null;
+    let swarmRunId = 0;
+    let isAutoScrolling = false;
+    let userTookScrollControl = false;
+    let autoScrollRaf = null;
+    let showcaseTimeout = null;
+    let showcasePauseResolve = null;
+
+    const appElement = document.getElementById('app');
+    const initialHtml = appElement.innerHTML;
+
+    // Granular sub-component targets so cursors type, measure, and build every single detail
+    const swarmTargets = [
+      // Top Navigation bar components
+      '.picto-logo',
+      '.picto-nav li a',
+      '#replayBtn',
+      '#tourBtn',
+      '.header-actions .btn-picto-primary',
+
+      // Hero components
+      '.hero-h1',
+      '.hero-p',
+      '.hero-actions .btn-picto-primary',
+      '.hero-actions .btn-picto-border',
+      '.hero-portrait-frame',
+      '.metric-cell',
+
+      // About components
+      '.about-img-box',
+      '.about-floating-social .social-btn',
+      '.about-content h2',
+      '.about-content p',
+      '.about-btns a',
+
+      // Work Process components
+      '.process-left-text h2',
+      '.process-left-text p',
+      '.process-card-icon-box',
+      '.process-card h4',
+      '.process-card p',
+
+      // Portfolio Project cards components
+      '.section-header-center h2',
+      '.section-header-center p',
+      '.project-card-img',
+      '.project-cat-badge',
+      '.picto-project-card h3',
+      '.project-desc',
+      '.project-checklist li',
+      '.chip-tag',
+      '#portfolio .btn-picto-primary',
+
+      // CTA Banner components
+      '.picto-cta-card h2',
+      '.picto-cta-card p',
+      '.picto-cta-card a',
+
+      // Services components
+      '.what-i-do-left h2',
+      '.what-i-do-left p',
+      '.what-i-do-left a',
+      '.service-icon-square',
+      '.service-body h3',
+      '.service-body p',
+
+      // Contact components
+      '.contact-left h2',
+      '.contact-left > p',
+      '.address-icon-box',
+      '.address-card-title',
+      '.address-card-val',
+      '.contact-left .social-btn',
+      '.form-group label',
+      '.form-group input',
+      '.form-group textarea',
+      '.picto-form-card button',
+
+      // Footer components
+      '.footer-row .picto-logo',
+      '.footer-links-list li a',
+      '.footer-copy'
+    ].join(', ');
+
+    let hasBuildStarted = false;
+    let containerObserver = null;
+    const containerSelector = 'header.picto-header, .hero-portrait-frame, .picto-metrics-bar, .picto-about-card, .process-card, .picto-project-card, .picto-cta-card, .horizontal-service-card, .picto-address-card, .picto-form-card, footer.picto-footer';
+
+    function observeContainers() {
+      if (containerObserver) containerObserver.disconnect();
+
+      containerObserver = new MutationObserver((mutations) => {
+        for (const m of mutations) {
+          if (m.type === 'attributes' && m.attributeName === 'data-swarm-intro-pending') {
+            if (!m.target.hasAttribute('data-swarm-intro-pending')) {
+              // The exact moment the swarm touches and starts building elements at the top:
+              if (!hasBuildStarted) {
+                hasBuildStarted = true;
+                // Wait 2.0 seconds (2000ms) after build starts at the top, unless user already took manual scroll control
+                if (!userTookScrollControl) {
+                  showcaseTimeout = setTimeout(() => {
+                    if (!userTookScrollControl) runShowcaseScroll();
+                  }, 2000);
+                }
+              }
+
+              const shell = m.target.closest(containerSelector);
+              if (shell && !shell.classList.contains('is-built')) {
+                shell.classList.add('is-built');
+              }
+            }
+          }
+        }
+      });
+
+      containerObserver.observe(appElement, {
+        attributes: true,
+        attributeFilter: ['data-swarm-intro-pending'],
+        subtree: true
+      });
+    }
+
+    function stopAutoScroll() {
+      if (showcaseTimeout) {
+        clearTimeout(showcaseTimeout);
+        showcaseTimeout = null;
+      }
+      if (showcasePauseResolve) {
+        const resolve = showcasePauseResolve;
+        showcasePauseResolve = null;
+        resolve();
+      }
+      if (autoScrollRaf) {
+        cancelAnimationFrame(autoScrollRaf);
+        autoScrollRaf = null;
+      }
+      if (isAutoScrolling) {
+        isAutoScrolling = false;
+        document.documentElement.style.scrollBehavior = '';
+      }
+    }
+
+    function handleUserManualScroll() {
+      userTookScrollControl = true;
+      stopAutoScroll();
+    }
+
+    // Cancel auto-scroll (or pending 2.0s auto-scroll start) on intentional user input
+    window.addEventListener('wheel', (e) => {
+      if (Math.abs(e.deltaY) > 6 || Math.abs(e.deltaX) > 6) {
+        handleUserManualScroll();
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchstart', () => {
+      handleUserManualScroll();
+    }, { passive: true });
+
+    window.addEventListener('pointerdown', (e) => {
+      // Detect user grabbing the native vertical scrollbar thumb/track
+      if (e.clientX >= document.documentElement.clientWidth) {
+        handleUserManualScroll();
+      }
+    }, { passive: true });
+
+    window.addEventListener('keydown', (e) => {
+      if (['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Space', 'Home', 'End', 'Escape'].includes(e.code || e.key)) {
+        handleUserManualScroll();
+      }
+    });
+
+    function smoothScrollTo(targetY, duration, easing = 'linear') {
+      return new Promise((resolve) => {
+        if (!isAutoScrolling) return resolve(false);
+
+        // Temporarily disable CSS smooth scrolling so RAF drives exact timing cleanly
+        document.documentElement.style.scrollBehavior = 'auto';
+
+        const startY = window.scrollY;
+        const diff = targetY - startY;
+        const startTime = performance.now();
+        let lastExpectedY = startY;
+
+        function step(now) {
+          if (!isAutoScrolling) {
+            document.documentElement.style.scrollBehavior = '';
+            return resolve(false);
+          }
+
+          // Yield cleanly if user manually dragged scrollbar or triggered external scroll
+          if (Math.abs(window.scrollY - lastExpectedY) > 8) {
+            handleUserManualScroll();
+            return resolve(false);
+          }
+
+          const elapsed = now - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = easing === 'easeInOut'
+            ? (progress < 0.5 ? 4 * progress * progress * progress : 1 - Math.pow(-2 * progress + 2, 3) / 2)
+            : progress;
+
+          const currentY = startY + diff * eased;
+          window.scrollTo(0, currentY);
+          lastExpectedY = window.scrollY;
+
+          if (progress < 1) {
+            autoScrollRaf = requestAnimationFrame(step);
+          } else {
+            document.documentElement.style.scrollBehavior = '';
+            resolve(true);
+          }
+        }
+
+        autoScrollRaf = requestAnimationFrame(step);
+      });
+    }
+
+    async function runShowcaseScroll() {
+      stopAutoScroll();
+      userTookScrollControl = false;
+      isAutoScrolling = true;
+
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      if (maxScroll <= 150) {
+        isAutoScrolling = false;
+        return;
+      }
+
+      // 1. Strictly UNIFORM speed descent: constant 140 pixels/second from top to bottom
+      const UNIFORM_SPEED_PPS = 140;
+      const scrollDownDuration = Math.round((maxScroll / UNIFORM_SPEED_PPS) * 1000);
+      const reachedBottom = await smoothScrollTo(maxScroll, scrollDownDuration, 'linear');
+      if (!reachedBottom || !isAutoScrolling) return;
+
+      // 2. Pause at bottom for 1.2 seconds to view contact & footer
+      await new Promise((r) => {
+        showcasePauseResolve = r;
+        showcaseTimeout = setTimeout(() => {
+          showcasePauseResolve = null;
+          r();
+        }, 1200);
+      });
+      if (!isAutoScrolling) return;
+
+      // 3. Quick animated bottom-to-top scroll (~700ms smooth easeInOutCubic)
+      await smoothScrollTo(0, 700, 'easeInOut');
+
+      // Finished showcase
+      stopAutoScroll();
+    }
+
+    function bindControls() {
+      document.getElementById('replayBtn')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        stopPairedTour();
+        // Instantly scroll to the top of the canvas before restarting
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        startSwarm();
+      });
+
+      document.getElementById('tourBtn')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        const btn = e.currentTarget;
+        if (btn.disabled) return;
+        btn.blur();
+        handleUserManualScroll();
+        startPairedTour();
+      });
+
+      document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener('click', () => {
+          stopPairedTour();
+          handleUserManualScroll();
+        });
+      });
+    }
+
+    function startSwarm() {
+      stopPairedTour();
+      stopAutoScroll();
+      const thisRunId = ++swarmRunId;
+      hasBuildStarted = false;
+      userTookScrollControl = false;
+
+      if (currentSwarm) {
+        currentSwarm.destroy();
+      }
+
+      // Always reset viewport to absolute top (scrollY = 0)
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+
+      document.body.classList.remove('swarm-completed');
+      document.querySelector('.bg-orbs-container')?.classList.remove('is-active');
+      appElement.innerHTML = initialHtml;
+
+      // Re-bind navbar buttons after DOM reset
+      bindControls();
+
+      // Listen for elements shedding pending state to reveal parent card shells
+      observeContainers();
+
+      currentSwarm = swarmIntro({
+        root: '#app',
+        targets: swarmTargets,
+        logo: "MS",
+        speed: 0.75,
+        cursors: 14,
+        maxCursors: 20,
+        color: '#6c5ce7',
+        background: '#ffffff',
+        skipButton: "Skip Intro (Esc)",
+        onSkip: () => handleUserManualScroll()
+      });
+
+      // When swarm completes, reveal ambient orbs/containers and unlock Tour button
+      currentSwarm.done.then(() => {
+        if (thisRunId !== swarmRunId) return;
+        containerObserver?.disconnect();
+        document.body.classList.add('swarm-completed');
+        document.querySelector('.bg-orbs-container')?.classList.add('is-active');
+        const tourBtn = document.getElementById('tourBtn');
+        if (tourBtn) {
+          tourBtn.disabled = false;
+          tourBtn.title = 'Start 2-cursor guided explanation tour';
+          tourBtn.classList.add('is-unlocked');
+        }
+      });
+    }
+
+    // Initial controls binding
+    bindControls();
+
+    window.handleFormSubmit = function(e) {
+      e.preventDefault();
+      alert("Thank you! Your message has been received.");
+      e.target.reset();
+    };
+
+    // Run on initial load
+    startSwarm();
+  </script>
+</body>
+</html>
