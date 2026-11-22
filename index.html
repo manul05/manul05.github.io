@@ -779,15 +779,17 @@
     }
 
     .project-checklist li {
+      position: relative;
+      padding-left: 18px;
       font-size: 13px;
       color: var(--picto-text-muted);
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
     }
 
     .project-checklist li::before {
       content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
       color: var(--picto-primary);
       font-weight: 800;
     }
@@ -892,19 +894,20 @@
     }
 
     .exp-bullets li {
+      position: relative;
+      padding-left: 18px;
       font-size: 14px;
       color: var(--picto-text-body);
       line-height: 1.65;
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
     }
 
     .exp-bullets li::before {
       content: "▸";
+      position: absolute;
+      left: 0;
+      top: 0;
       color: var(--picto-primary);
       font-weight: 800;
-      flex-shrink: 0;
     }
 
     .exp-bullets strong {
