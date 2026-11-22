@@ -10,85 +10,85 @@ export const TOUR_STEPS = [
   // 1-4: Work Process (#process)
   {
     section: 'Work Process',
-    title: '1. Architecture & Prompt Design',
-    architectNote: 'Structures multi-LLM execution graphs, strict JSON tool schemas, and state-aware conversational repeat guards tailored for Indian-English cadence.',
-    opsNote: 'Prevents token waste, prompt drift, and looping failures before requests ever reach expensive downstream voice or GPU rendering workers.'
+    title: '1. Architecture & Guardrail Docs',
+    architectNote: 'Structures prompt and context architectures with CLAUDE.md, CONTEXT.md, repeat guards, and Do-Not-Break security rules before code generation.',
+    opsNote: 'Prevents prompt drift, token waste, and agent regressions before workflows ever reach production voice or GPU rendering pipelines.'
   },
   {
     section: 'Work Process',
     title: '2. Agentic Delivery',
-    architectNote: 'Executes spec-driven 0-to-1 scaffolding across Claude Code, OpenAI Codex, and Antigravity with isolated modular components.',
-    opsNote: 'Replaces slow multi-developer handoffs with single-operator delivery while enforcing verification gates, contract checks, and regression runs.'
+    architectNote: 'Directs Claude Code, OpenAI Codex, and Google Antigravity for spec-driven 0-to-1 scaffolding across Supabase, Pusher, Cloudflare, and Railway.',
+    opsNote: 'Replaces multi-developer handoff bottlenecks with single-operator orchestration while enforcing modular boundaries and regression checks.'
   },
   {
     section: 'Work Process',
     title: '3. RunPod GPU Cluster Ops',
-    architectNote: 'Packages MuseTalk and LatentSync inference pipelines into hardened Docker containers driven by async job queues and worker callbacks.',
-    opsNote: 'Runs auto-lifecycle RTX 4090 & A4000 pods that tear down automatically when idle, streaming cluster health straight to Telegram alerts.'
+    architectNote: 'Packages self-hosted MuseTalk and LatentSync inference pipelines into Docker containers backed by async queues and worker callbacks.',
+    opsNote: 'Optimizes RunPod GPU unit economics and monitors cluster health live through a dedicated Render Ops console with Telegram alerts.'
   },
   {
     section: 'Work Process',
-    title: '4. Security & Compliance',
-    architectNote: 'Designs zero-trust RBAC routes, time-limited media presigning, and PII-minimized schema boundaries before shipping features.',
-    opsNote: 'Audited 38+ production schemas under Section 9(3) of the Indian DPDP Act 2023 and closed authentication bypasses prior to rollout.'
+    title: '4. Security & QA Governance',
+    architectNote: 'Enforces least-privilege RBAC, Cloudflare R2 presigned URLs, and multi-tenant isolation boundaries across AI-generated codebases.',
+    opsNote: 'Audits AI builds for IDORs and session-revocation gaps before launch and gates Railway deployments with Playwright and Jest QA suites.'
   },
 
   // 5-10: Portfolio (#portfolio)
   {
     section: 'Portfolio',
     title: 'Ai-Mind / EduMind',
-    architectNote: 'Single-prompt autonomous course engine generating syllabus structure, auto-fitted slides, narration audio, and lip-synced instructor video.',
-    opsNote: 'Migrated from pricey SaaS APIs to self-hosted RunPod GPU clusters — cutting preview costs to ₹4–₹6 via a live Render Ops console.'
+    architectNote: 'AI video course studio powered by Gemini and Claude generating structured curricula, TextFit slides, narration, and lip-synced lessons.',
+    opsNote: 'Orchestrates self-hosted MuseTalk & LatentSync on RunPod GPUs for strong unit economics, tracked via a Render Ops console with Telegram alerts.'
   },
   {
     section: 'Portfolio',
     title: '"Meera" AI Voice Tutor',
-    architectNote: 'Full-duplex conversational English tutor built on Google Gemini Flash Live API with barge-in control and repeat-guard memory.',
-    opsNote: 'Automated Sarvam AI streaming TTS failover maintains sub-second (<1s) spoken response latency with zero turn-collision overlap.'
+    architectNote: 'Full-duplex conversational English tutor built on Google Gemini Flash Live API, Chirp3-HD, Indian-English prompts, and repeat-guard memory.',
+    opsNote: 'Automated Sarvam AI streaming TTS fallbacks sustain sub-second (<1s) spoken response latency without conversational turn collisions.'
   },
   {
     section: 'Portfolio',
-    title: 'Enterprise LMS & Affiliate Platform',
-    architectNote: 'Scalable EdTech modernization supporting thousands of active learners plus atomic ledger accounting across multi-tier affiliate payouts.',
-    opsNote: 'Eliminates course video scraping via Cloudflare R2 presigned time-limited URLs while Railway CI automates safe staging-to-prod promotion.'
+    title: 'Hitarthi-Main (LMS & Affiliate Platform)',
+    architectNote: 'Agent-driven modernization of a commercial EdTech LMS serving thousands of students with Razorpay payments and multi-tier affiliate tracking.',
+    opsNote: 'Secures course video streaming with Cloudflare R2 presigned URLs, verifies differential payouts, and enforces Playwright/Jest Railway QA gates.'
   },
   {
     section: 'Portfolio',
-    title: 'Hitarthi-Typing & DPDP Compliance',
-    architectNote: 'Real-time keystroke telemetry engine pinpointing slow per-finger key transitions alongside parental consent & data-minimization gates.',
-    opsNote: 'Audited all 38 relational DB tables under DPDP Act 2023 Section 9(3) for under-18 learners with hardened B2B data fiduciary contracts.'
+    title: 'Hitarthi-Typing Platform',
+    architectNote: 'Multi-tenant typing platform with Student, Teacher, and Admin portals, Stripe billing, Pusher multiplayer, PostHog analytics, and an AI adaptive coach.',
+    opsNote: 'Built using structured CONTEXT.md / Do-Not-Break security guardrails and audited for multi-tenant IDORs and session-revocation gaps.'
   },
   {
     section: 'Portfolio',
     title: 'Cloud SOC Incident Automation',
-    architectNote: 'Event-driven security orchestration pipeline piping Wazuh XDR webhooks into Shuffle SOAR workflows and TheHive case queues.',
-    opsNote: 'Automatically enriches SHA256 hashes & C2 IPs via VirusTotal and emails triage briefs in seconds — packaged reproducibly in Docker.'
+    architectNote: 'Event-driven security orchestration pipeline piping Wazuh XDR webhook alerts into Shuffle SOAR workflows and TheHive case queues.',
+    opsNote: 'Automatically enriches SHA256 hashes & C2 IPs via VirusTotal and alerts analysts in seconds — packaged reproducibly in Docker.'
   },
   {
     section: 'Portfolio',
-    title: 'Active Directory Adversary Lab',
-    architectNote: 'Isolated Windows Server 2022 Active Directory simulation lab streaming deep endpoint process events via Sysmon to Splunk SIEM.',
-    opsNote: 'Validated alerts against Atomic Red Team Kerberoasting & RDP brute-force playbooks, cutting SIEM false positives by 25%.'
+    title: 'Active Directory Splunk Lab',
+    architectNote: 'Windows Server 2022 Active Directory simulation lab streaming deep endpoint process events via Sysmon into custom Splunk SPL dashboards.',
+    opsNote: 'Validates Kerberoasting & RDP brute-force detections via Atomic Red Team, applying SIEM tuning practices that cut false positives by 25%.'
   },
 
   // 11-13: What I do? (#services)
   {
     section: 'What I do?',
-    title: 'Autonomous Product Engineering',
-    architectNote: 'End-to-end 0-to-1 system architecture covering data models, API contracts, real-time frontends, and agentic code synthesis.',
-    opsNote: 'Ships commercial-grade AI products rapidly with solo accountability and automated QA verification instead of team communication drag.'
+    title: 'AI Orchestration & Product Building',
+    architectNote: 'End-to-end 0-to-1 system architecture orchestrating Claude Code, OpenAI Codex, and Antigravity under CLAUDE.md and CONTEXT.md guardrails.',
+    opsNote: 'Ships commercial AI platforms rapidly with solo accountability, Playwright/Jest QA verification, and zero multi-developer drag.'
   },
   {
     section: 'What I do?',
-    title: 'AI Operations & GPU Clusters',
-    architectNote: 'Production inference engineering spanning containerized video lip-sync, WebSocket voice streams, and multi-provider fallbacks.',
-    opsNote: 'Reclaims unit-economic margins using self-hosted RunPod GPU fleets with cold-start tuning, pod reaper scripts, and live bot telemetry.'
+    title: 'Multimodal & RunPod GPU Ops',
+    architectNote: 'Production inference pipelines combining self-hosted MuseTalk/LatentSync lip-sync with Gemini Live API, Chirp3-HD, and Sarvam AI voice loops.',
+    opsNote: 'Optimizes RunPod GPU unit economics and uptime with containerized deployments, Render Ops consoles, and live Telegram monitoring alerts.'
   },
   {
     section: 'What I do?',
-    title: 'Cloud Security & DPDP Compliance',
-    architectNote: 'Combines OWASP Top 10 VAPT, presigned object-storage enforcement, and privacy-by-design database architecture.',
-    opsNote: 'Prepares fast-moving EdTech and AI startups for audit readiness under Indian DPDP Act 2023 Section 9(3) requirements from launch.'
+    title: 'AI Security Auditing & Cloud Ops',
+    architectNote: 'Combines AI build auditing (IDORs, RBAC, session revocation), OWASP VAPT (Burp Suite, Nmap), and Cloudflare R2 / AWS IAM hardening.',
+    opsNote: 'Ensures fast-moving AI releases stay production-safe across AWS, Cloudflare Workers & Pages, and Railway with automated QA gates.'
   }
 ];
 
